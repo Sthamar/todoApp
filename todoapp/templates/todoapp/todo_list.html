@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}TodoList{% endblock title %}
+{% block content %}
+    <div class="container">
+        <h1>Todo List</h1>
+        <div class="complete-list">
+            <ul>
+                {% if message %}
+                    {{message}}
+                {% else %}
+                    {% for todo in todos  %}
+                    <li>
+                        <a href="{%url 'todopage' todo.id%}">
+                            <h3>{{todo.title}} </h3><p> - Created on {{todo.created_date}} status <strong>{{todo.status}} {% if todo.status == 'completed' %}✅ {% else %}❌{% endif %}</strong> </p>
+                        </a>
+                    </li>
+                    {% endfor %}
+                {% endif %}
+                
+               
+            </ul>
+        </div>
+        
+    </div>
+{% endblock content %}

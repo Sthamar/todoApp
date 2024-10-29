@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'todoapp/css/style.css' %}">
+    <title>signUp</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <div class="form">
+            <form method="POST">
+                {% csrf_token %}
+               {{form.as_p}}
+
+                <button class="login-btn" type="submit">Sign Up</button>
+            </form>
+            <div class="signup">
+                <p>Already have an account? <a href="{% url "loginuser" %}">Login</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

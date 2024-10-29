@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'todoapp/css/style.css' %}">
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <nav class="left">
+                <ul>
+                    <li><a href="{% url "home" %}"><h1>Todo</h1></a></li>
+                    <li><a href="{% url "todo_list" %}">Todo-list</a></li>
+                </ul>
+            </nav>
+            <nav class="right">
+                {% if user.is_authenticated %}
+                <ul>
+                    <li>
+                        <form action="{% url "logoutuser" %}" method="POST">
+                            {% csrf_token %}
+                            <button type="submit" id="logout">Logout</button>
+                        </form>
+                    </li>
+                </ul>
+                
+                {% else %}
+                <ul>
+                    <li><a href="{% url "signupuser" %}">Sign Up</a></li>
+                    <li><a href="{% url 'loginuser' %}">Login</a></li>
+                </ul>
+                {% endif %}
+                
+            </nav>
+        </div>
+    </header>
+   {% block content %}
+   
+   {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Todo Page{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h1>{{user.username}}</h1>
+        <div class="form">
+            <form method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type='submit' class="save-btn">save</button>
+                    
+
+            </form>
+            <form  method="POST" action='{% url "deletetodo" todo.id %}'>
+                {% csrf_token %}
+                <button type='submit' class="delete-btn">delete</button>
+            </form>
+        </div>
+        
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    overflow: hidden;
+}
+
+body{
+    background-color: rgba(127, 255, 212, 0.425);
+}
+
+/* nav bar */
+.nav{
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.nav .left ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.nav .right ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.right ul li, .left ul li{
+    margin: 0 30px 0 10px;
+    list-style: none;
+}
+
+.right ul li a, .left ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+#logout{
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+}
+
+.right ul li a:hover, .left ul li a:hover, #logout:hover{
+    text-decoration: underline;
+}
+
+
+
+/* container */
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.description{
+    margin: 30px;
+    width: 50%;
+}
+
+
+.create-btn a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    
+}
+
+
+.create-btn{
+    cursor: pointer;
+    background-color: greenyellow;
+    padding: 20px 40px;
+    border: 0;
+    border-radius: 8%;
+}
+
+
+.create-btn:active{
+    transform: scale(0.98);
+}
+
+
+/* create */
+.form{
+    background-color: rgba(0, 255, 255, 0.308);
+    padding: 70px;
+    border: 0;
+    border-radius: 8%;
+}
+
+.form form p{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.form form p input{
+    border: 0;
+    width: 100%;
+}
+
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+.save-btn{
+    cursor: pointer;
+    background-color: rgb(21, 250, 13);
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 8%;
+    margin-right: 20px;
+}
+
+.complete-btn{
+    cursor: pointer;
+    background-color: rgb(234, 250, 13);
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 8%;
+    margin-right: 20px;
+}
+
+.delete-btn{
+    cursor: pointer;
+    background-color: rgb(250, 68, 13);
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 8%;
+}
+
+.save-btn a, .complete-btn a, .delete-btn a{
+    color: black;
+    text-decoration: none;
+}
+
+
+.save-btn a:active, .complete-btn a:active, .delete-btn a:active{
+    transform: scale(0.98);
+}
+
+
+/* complete */
+
+.complete-list{
+    background-color: rgba(132, 0, 255, 0.308);
+    margin: 40px;
+    padding: 70px;
+    border: 0;
+    border-radius: 8%;
+    
+}
+
+
+.complete-list ul li a{
+    background-color: rgba(0, 0, 255, 0.404);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    padding: 10px;
+    border: 0;
+    border-radius: 5%;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+
+}
+
+
+.complete-list ul li a:hover{
+    text-decoration: underline;
+}
+
+
+.login-btn{
+    cursor: pointer;
+    background-color: rgb(21, 255, 60);
+    border: 0;
+    padding: 10px 40px;
+
+}
+span{
+    content-visibility: hidden;
+}
+
+.form form ul{
+    content-visibility:hidden ;
+}
